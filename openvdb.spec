@@ -2,7 +2,7 @@
 %define libname %mklibname openvdb
 %define devname %mklibname openvdb -d
 
-%bcond ax 1
+%bcond ax 0
 %bcond docs 1
 %bcond imath 1
 %bcond nanovdb 1
@@ -36,6 +36,7 @@ BuildOption:	-DOPENVDB_TOOL_USE_JPG:BOOL=ON
 BuildOption:	-DOPENVDB_TOOL_USE_NANO:BOOL=OFF
 BuildOption:	-DOPENVDB_TOOL_USE_PNG:BOOL=ON
 %if %{with ax}
+# Note: OpenVDB AX does not yet support LLVM 23 (IRBuilder/Constant API breaks)
 BuildOption:	-DHAVE_FFI_CALL=ON
 BuildOption:	-DUSE_AX=ON
 BuildOption:	-DLLVM_STATIC=0
