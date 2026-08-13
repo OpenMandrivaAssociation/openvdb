@@ -12,7 +12,7 @@
 
 Name:		openvdb
 Version:	13.0.0
-Release:	2
+Release:	3
 Summary:	Sparse volume data structure and tools
 License:	Apache-2.0
 Group:		System/Libraries
