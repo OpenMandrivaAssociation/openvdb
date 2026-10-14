@@ -11,8 +11,8 @@
 %bcond tests 1
 
 Name:		openvdb
-Version:	13.0.0
-Release:	3
+Version:	13.1.0
+Release:	1
 Summary:	Sparse volume data structure and tools
 License:	Apache-2.0
 Group:		System/Libraries
@@ -107,7 +107,7 @@ BuildRequires:	pkgconfig(OpenEXR)
 %endif
 %if %{with python}
 BuildRequires:	nanobind
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(numpy)
 %endif
 
