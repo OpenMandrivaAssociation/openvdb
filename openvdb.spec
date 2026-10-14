@@ -111,6 +111,10 @@ BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(numpy)
 %endif
 
+%prep -a
+# Cooker Doxygen is 1.18. Upstream still rejects anything from 1.15 up.
+sed -i 's/Doxygen 1\.0\.\.\.<1\.15\.0/Doxygen 1.8/' doc/CMakeLists.txt
+
 %description
 OpenVDB is a C++ library comprising a hierarchical data structure and
 a large suite of tools for the efficient storage and manipulation of
